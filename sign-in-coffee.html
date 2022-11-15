@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<base href='/storage/emulated/0/A Web/'>
+<meta http-equiv="Content-Type" content='text/html; charset: utf-8'>
+<meta http-equiv="X-UA-Compatible" content='IE=EDGE'>
+<meta name="viewport" content='width=device-width,  initial-scale=1'>
+<title>Sign-In</title>
+
+<style type='text/css' rel='stylesheet'>
+@font-face {
+ font-family: "coffe";
+ src:url('fonts/ChopinScript.ttf');
+}
+*{padding:0; margin:0;}
+
+body{
+--bg-image:url('black-coffee.jpeg');
+--bg-image-opacity:.8;
+/*place-content: center*/;
+min-height: 690px
+position: relative;
+color:white;
+isolation: isolate;
+background-size:cover;
+    
+}
+
+body::after{
+ content: '';
+ background: pink repeat;
+ top:0;
+ bottom:0;
+ right: 0;
+ left:0;
+ z-index:-1;
+ position: absolute;
+ opacity: var(--bg-image-opacity);
+background: var(--bg-image);
+background-size: cover;
+}
+
+.coffee{
+    font-family:"coffe";
+    text-align: center;
+    font-weight: thin;
+    letter-spacing: 15px;
+    word-spacing: 8px;
+    font-size:25px;
+}
+#fieldset-bg{
+    --bg: rgba(10,10,10,0.4);
+    background: var(--bg);
+    border-color: red;
+    
+}
+.input-field{
+    background: rgba(0,0,0,.7);
+    border-color:red;
+    border-style:inset;
+    border-width: thin;
+    color:white;
+    padding-right: 2.5em;
+}
+.new-btn{
+ background:rgba(0,0,0,.4);
+ position:absolute;
+ border-color:rgba(210,210,210,.6);
+ left:1in;
+ width:1.7in;
+ color:white;
+ font-weight: bold;
+}
+.log-btn{
+ background:rgba(250,0,0,.8);
+ color:white;
+ border-color:rgba(210,210,210,.5);
+ width:1.2in;
+ position:absolute;
+ left:1.3in;
+ font-weight:bold;
+}
+</style>
+        
+    </head>
+    <body>
+        
+   <p class='coffee'>Coffe House</p>
+   <br>
+   <fieldset id='fieldset-bg'>
+      <legend>Customer's Account
+      </legend>
+      <form id='save' method='post'  action='#'>
+        <br>
+        <label>Username:
+          <input type='text' class='input-field' required>
+        </label>
+        <br>
+        <br>
+        <label>Password:
+          <input type='password' required class='input-field'>
+        </label><br><br>
+      </form>
+    </fieldset>
+    <br>
+    <div>
+      <a href='www.fgps.com' style='color: #c0c0c0'>Forgot Password?
+      </a>
+    </div>
+    <br>
+    <input class='log-btn' form='save' type='button' value='Log In'>
+    <br>
+    <br>
+    <a href="sign-up-coffee.html">
+      <input type='button' class='new-btn' value='Create New Account'/>
+    </a>
+
+    
+
+</body>
+</html>

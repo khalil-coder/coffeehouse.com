@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<base href='/storage/emulated/0/A Web/'>
+<meta http-equiv="Content-Type" content='text/html; charset: utf-8'>
+<meta http-equiv="X-UA-Compatible" content='IE=EDGE'>
+<meta name="viewport" content='width=device-width,  initial-scale=1'>
+<title>Sign-In</title>
+
+<style type='text/css' rel='stylesheet'>
+@font-face {
+ font-family: "coffe";
+ src:url('fonts/ChopinScript.ttf');
+}
+*{padding:0;
+ margin:0;
+}
+
+body{
+--bg-image:url('black-coffee.jpeg');
+--bg-image-opacity:.8;
+position: relative;
+color:white;
+isolation: isolate;
+background-size:cover;
+    
+}
+
+body::after{
+ content: '';
+ background: pink repeat;
+ top:0;
+ bottom:0;
+ right: 0;
+ left:0;
+ z-index:-1;
+ position: absolute;
+ opacity: var(--bg-image-opacity);
+background: var(--bg-image);
+background-size: cover;
+}
+
+.coffee{
+    font-family:"coffe";
+    text-align: center;
+    font-weight: thin;
+    letter-spacing: 15px;
+    word-spacing: 8px;
+    font-size:25px;
+}
+#fieldset-bg{
+    --bg: rgba(10,10,10,0.4);
+    background: var(--bg);
+    border-color: red;
+    
+}
+.input-field{
+    background: rgba(0,0,0,.7);
+    border-color:red;
+    border-style:inset;
+    color:white;
+    padding-right: 3em;
+    border-width: thin;
+}
+.sign-in-btn{
+ background:rgba(0,0,0,.4);
+ position:relative;
+ border-color:rgba(210,210,210,.6);
+ left:1.3in;
+ width:clamp(1in, 1vh, 1.3in);
+ color:white;
+ font-weight: bold;
+}
+.sign-up-btn{
+ background:rgba(250,0,0,.8);
+ color:white;
+ border-color:rgba(210,210,210,.5);
+width:clamp(1in, 1vh, 1.3in);
+ position:relative;
+ left:1.3in;
+ font-weight: bold;
+}
+#select{
+    background: rgba(0,0,0,.7);
+    border-color:red;
+    border-style:inset;
+    color:white;
+    padding-right: 7px;
+    border-width:thin;
+} 
+#tel{
+    background: rgba(0,0,0,.7);
+    border-color:red;
+    border-style:inset;
+    color:white;
+    width: clamp(1in, 100%, 1.2in);
+    border-width:thin;
+
+}
+.c-ps{
+    background: rgba(0,0,0,.7);
+    border-color:red;
+    border-style:inset;
+    color:white;
+    width:clamp(1in, 100%, 1.2in);
+    border-width:thin;
+
+}
+#have-account{
+    color:#c0c0c0;
+    text-align: center;
+}
+.username{
+    background: rgba(0,0,0,.7);
+    border-color:red;
+    border-style:inset;
+    color:white;
+    width:clamp(1.9in, 100%, 2in);
+    border-width:thin;
+}
+</style>
+        
+    </head>
+    <body>
+  <p class='coffee'>Coffee House</p>
+  <br>
+     <fieldset id='fieldset-bg'>
+      <legend>Customer's Account
+      </legend>
+      <form id='save' method='post' action='#'>
+        <br>
+        <label>Name:
+          <input type='text' class='input-field' required>
+        </label>
+        <br>
+        <br>
+        <label>Email:
+          <input type='email' class='input-field' required pattern='^\[\w._\]+@\[a-z\]{5}.com$'>
+        </label><br><br>
+        
+               <label>Username:
+          <input type='text' class='username'>
+        </label><br><br>
+        
+               <label>Phone Number:
+               <select id='select'>
+         <option selected>+1</option>
+        <option>+234</option>
+               <option>+199</option>
+               <option>+222</option>
+               <option>+281</option>
+               <option>+67</option>
+          <input type='tel' id='tel' required maxlength='10' pattern='^\[\d\]{10}$'>
+          
+          </select>
+        </label><br><br>
+        
+               <label>DOB:
+          <input type='date' class='input-field' required>
+        </label><br><br>
+        
+        <label>Country:
+        <select class='input-field'>
+        <option selected>Select your country</option>
+        <option>America</option>
+        <option>Australia</option>
+        <option>Algeria</option>
+        <option>Bangladesh</option>
+        <option>Canada</option>
+        <option>Afghanista</option>
+        <option>Nigeria</option>
+        <option>India</option>
+        <option>Indonesia</option>
+        <option>North Korea</option>
+        <option>Pakistan</option>
+        <option>Palestine</option>
+        <option>Russia</option>
+        <option>South Korea</option>
+        </select></label>
+        <br><br>
+        
+         <label>Password:
+          <input type='password' class='input-field' required min='8'>
+        </label><br><br>  
+        <label>Confirm Password:
+          <input type='password' class='c-ps' required>
+        </label><br><br>
+      </form>
+      
+      
+    </fieldset>
+    
+    <div>
+    <label>Gender 
+    <input class='box' type='radio' name='gender'>Male
+    <input class='box' type='radio' name='gender'>Female
+    </label>
+    </div><br>
+  
+    <input class='box' type='checkbox'>I agree to the Terms and Conditions<br><br>
+    <input type='button' value='Sign Up' class='sign-up-btn'/>
+    <div>
+    <hr><br>
+    <p id='have-account'>Already have a member account?</p>
+    <a href="sign-in-coffee.html"><input type='button' class='sign-in-btn' value='Sign In'/></a>
+    </div>
+    
+
+</body>
+</html>
